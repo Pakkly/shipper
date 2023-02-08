@@ -1,0 +1,93 @@
+
+
+body{
+    background-color: #2f2f2f;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor:default;
+}
+
+#title{
+    text-align: center;
+    color:white;
+    margin-top: 30px;
+    font-family: "sora";
+    font-size: 14pt;
+}
+#description{
+    text-align: center;
+    color:#999999;
+    margin-top: 10px;
+    font-family: "sora";
+    font-size: 14px;
+
+}
+
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:32px;
+    display: none;
+    color: white;
+}
+.visible{
+    display: block;
+}
+
+#buttons *{
+    padding: 9px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+    border-radius: 3px;
+    font-family: "sora";
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    outline: inherit;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    right: 15px;
+}
+button:active{
+    transform: scale(0.95);
+}
+#spacing{
+    flex-shrink: 1;
+}
+#yes{
+    color:white;
+    background-color: #8758EB;
+
+}
+#no{
+    color:#8758EB;
+    background-color: transparent;
+    border-color: #8758EB;
+    border-width: 1px;
+    border-style: solid;
+}
+#dragHandle{
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+    top:0%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /*background-color: red; TODO HERE!*/
+}

@@ -1,0 +1,22 @@
+[package]
+name = "html_embed"
+version = "0.1.0"
+authors = ["zan <zan.sama2@gmail.com>"]
+edition = "2021"
+publish = false
+[lib]
+path="src/lib.rs"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.dev]
+split-debuginfo = "unpacked"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units=1
+
+[build-dependencies]
+duct = "0.13.6"
+which = "4.4.0"
+pathdiff = "0.2.1"
+pakkly_error = {path="../pakkly_error" }

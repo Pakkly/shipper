@@ -1,0 +1,6 @@
+/target
+/generated
+node_modules
+mocker/latest*
+mocker/testbinary/target
+lib/*/target

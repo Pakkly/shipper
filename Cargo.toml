@@ -1,0 +1,53 @@
+[package]
+name = "shipper"
+version = "1.0.0"
+edition = "2021"
+license = "LGPL-3.0-only"
+publish = false
+
+[profile.release]
+opt-level = "z"
+lto = true
+debug = 0
+strip = true
+codegen-units=1
+
+
+[build-dependencies]
+duct = "0.13.5"
+backtrace = "0.3.67"
+
+[target.'cfg(windows)'.build-dependencies]
+embed-resource = "1.8.0"
+
+[dependencies]
+web-view = {path="lib/webview"}
+ureq = "2.6.2"
+zip = { version = "0.6.2", default-features=false, features=["deflate","bzip2","zstd"]}
+tempfile = "3.3.0"
+backtrace = "0.3.67"
+directories = "4.0.1"
+fs_extra = "1.2.0"
+serde = {version ="1.0.136",features = ["derive"]}
+serde_json = "1.0.91"
+lazy_static = "1.4.0"
+hex = "0.4.3"
+log = { version = "0.4.17", features = ["std"] }
+wyhash = "0.5.0"
+chrono = "0.4.23"
+serde_bytes = "0.11.8"
+html_embed = {path="lib/html_embed" }
+pakkly_error = {path="lib/pakkly_error" }
+licensor = {path="lib/licensor" }
+[target.'cfg(not(target_os="macos"))'.dependencies]
+sysinfo = "0.27.7"
+[target.'cfg(target_os="macos")'.dependencies]
+walkdir = "2.3.2"
+objc = "0.2.7"
+[target.'cfg(target_os="windows")'.dependencies]
+winreg = "0.10.1"
+windows_interface = {path="lib/windows_interface" }
+[target.'cfg(target_os="linux")'.dependencies]
+base64 = "0.21.0"
+nix = "0.26.2"
+tar = "0.4.38"

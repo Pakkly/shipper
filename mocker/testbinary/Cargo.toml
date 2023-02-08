@@ -1,0 +1,16 @@
+[package]
+name = "exampleapp"
+version = "0.1.0"
+authors = ["zan <zan.sama2@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.'cfg(windows)'.build-dependencies]
+cc = "1.0.78"
+embed-resource = "1.8.0"
+
+
+[dependencies]
+web-view = {path="../../lib/webview"}
+ureq = "2.6.2"

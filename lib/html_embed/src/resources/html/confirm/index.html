@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="sora.css"></link>
+        <link rel="stylesheet" href="index.css"></link>
+        <title>Confirm</title>
+    </head>
+    <body>
+        <div id="dragHandle">
+            
+        </div>
+        <div id="container">
+            <img class="header" id="Error" src="svg/Error.svg">
+            <img class="header" id="NoInternet" src="svg/NoInternet.svg">
+            <img class="header" id="Question" src="svg/Question.svg">
+            <div id="title"></div>
+            <div id="description">
+                
+            </div>
+            <div id="buttons">
+                <button id="yes" onclick="external.invoke('yes')">Yes</button>
+                <button id="no"  onclick="external.invoke('no')">No</button>
+            </div>
+            <script src="index.js"></script>
+        </div>
+    </body>
+</html>
