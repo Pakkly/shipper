@@ -1,0 +1,1 @@
+rustup run stable-i686-pc-windows-msvc cargo build --profile $_profile
